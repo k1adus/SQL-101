@@ -43,4 +43,46 @@ WHERE
  	average_rating BETWEEN 3.9 AND 4.1 -- вывести значения в интевале от 3.9 до 4.1
 	-- используй операторы NOT, AND, OR
 	
+SELECT 
+	*
+FROM
+	vg
+WHERE
+	platform 
+	IS
+	NULL
+	OR
+	na_sales
+	IS
+	NULL
 	
+--Список агрегатных функций:
+
+--count (количество не пустых значений),
+--sum (сумму),
+--avg (среднее),
+--max (максимум),
+--min(минимум) для набора строк.
+
+
+
+SELECT 
+	"date", -- если название столбца в таблице совпадает со служебными названиями - берем их в кавычки
+	region,
+	small_bags,
+	large_bags,
+	SUM ("total_volume") AS "summa region" -- агрегирующая функция
+
+FROM
+	avocado_prices
+WHERE
+	region IN -- с помощью IN можно перечислять значения входящие в столбец чтобы не писать много раз OR
+	('Boston',
+	'Albany')
+GROUP BY  		-- включаем сюда все столбцы для которых брали агрегирующую функцию
+	"date",
+	region,
+	small_bags,
+	large_bags
+ORDER BY
+	region DESC
