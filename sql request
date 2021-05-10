@@ -23,4 +23,16 @@ LIMIT
 OFFSET
 	10 -- отступ на Х строк
   
+  -- 2021-05-10
   
+ SELECT
+  	title,
+	num_pages,
+  	average_rating,
+  	(num_pages) * (average_rating) AS "sum rating" -- можно выполнять математические операции и операции сравнения и выводить результаты в отдельный столбец
+FROM
+	books
+ORDER BY
+ 	"sum rating" DESC 
+	
+	
