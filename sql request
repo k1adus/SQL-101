@@ -35,4 +35,12 @@ FROM
 ORDER BY
  	"sum rating" DESC 
 	
+SELECT
+ 	*
+FROM
+	books
+WHERE
+ 	average_rating BETWEEN 3.9 AND 4.1 -- вывести значения в интевале от 3.9 до 4.1
+	-- используй операторы NOT, AND, OR
+	
 	
