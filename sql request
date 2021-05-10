@@ -1,0 +1,26 @@
+/* многострочный комент
+-
+-
+- */
+
+-- select * from avocado_prices; --коменты таблица с авокадо
+-- select * from books; -- коменты таблица с книгами
+
+/*  select 32+5 AS SellerID */ -- добавляем свой столбец и называем его SellerID
+-- select isbn, title from books
+-- select distinct publisher from books -- вывод уникальных значений для столбца publisher из таблицы  books
+
+SELECT
+	distinct title,
+	average_rating,
+	(average_rating + 1)/2 AS Raiting_me
+FROM
+	books
+ORDER BY
+	title DESC
+LIMIT
+	15 -- лимит вывода строк на экран. Для больших таблиц
+OFFSET
+	10 -- отступ на Х строк
+  
+  
