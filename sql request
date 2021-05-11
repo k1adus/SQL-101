@@ -86,3 +86,17 @@ GROUP BY  		-- включаем сюда все столбцы для котор
 	large_bags
 ORDER BY
 	region DESC
+	
+	
+	
+--логический порядок обработки инструкций в SQL
+-- FROM
+-- ON
+-- JOIN
+-- WHERE
+-- GROUP BY
+-- HAVING
+-- SELECT
+-- DISTINCT
+-- ORDER BY	
+	
