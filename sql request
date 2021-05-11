@@ -11,7 +11,7 @@
 -- select distinct publisher from books -- вывод уникальных значений для столбца publisher из таблицы  books
 
 SELECT
-	distinct title,
+	distinct title, -- посмотреть уникальные названия книг
 	average_rating,
 	(average_rating + 1)/2 AS Raiting_me
 FROM
